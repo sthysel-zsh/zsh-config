@@ -1,1 +1,21 @@
+export TERM="xterm-256color"
+source ~/.zplug/init.zsh
+
+# plugin config
+DEFAULT_USER=thys
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
+
+# zplug plumming
+zprompt_theme='powerlevel9k'
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+# Install any uninstalled plugins
+if ! zplug check; then
+    zplug install
+fi
 for config (~/.zsh/*.zsh) source $config
+
+zplug load --verbose
+

@@ -12,3 +12,10 @@ ln -s zsh-config/dotzshrc ~/.zshrc
 ```
 pacman -S zsh zsh-completions
 ```
+
+
+# going with zplug
+
+curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
+
+

@@ -9,5 +9,5 @@ powerline-on() {
     . ${POWERLINE}
   fi
 }
-powerline-on
+# powerline-on
 

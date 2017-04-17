@@ -1,8 +1,34 @@
-export TERM="xterm-256color"
+TERM="xterm-256color"
 
+
+zprompt_theme='powerlevel9k'
 for config (~/.zsh/*.zsh) source $config
 
-source ~/.zplug/init.zsh
+ZPLUG_HOME=~/.zplug
+if [[ ! -d ${ZPLUG_HOME} ]]
+then
+  git clone https://github.com/zplug/zplug ${ZPLUG_HOME}
+  source ${ZPLUG_HOME}/init.zsh && zplug update --verbose
+fi
+
+source ${ZPLUG_HOME}/init.zsh
+
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose
+then
+    printf "Install? [y/N]: "
+    if read -q
+    then
+        echo
+        zplug install
+    else
+        echo
+    fi
+fi
+
 
 # plugin config
 DEFAULT_USER=$USER
@@ -11,13 +37,4 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
 
-# zplug plumming
-zprompt_theme='powerlevel9k'
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-# Install any uninstalled plugins
-if ! zplug check; then
-    zplug install
-fi
-
 zplug load --verbose
-

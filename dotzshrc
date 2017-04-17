@@ -1,8 +1,11 @@
 export TERM="xterm-256color"
+
+for config (~/.zsh/*.zsh) source $config
+
 source ~/.zplug/init.zsh
 
 # plugin config
-DEFAULT_USER=thys
+DEFAULT_USER=$USER
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
@@ -15,7 +18,6 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 if ! zplug check; then
     zplug install
 fi
-for config (~/.zsh/*.zsh) source $config
 
 zplug load --verbose
 

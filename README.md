@@ -1,3 +1,7 @@
 # Super Simple zsh config
 
-All bits got in .zsh/ and all .zshrc does is load them.
+All bits go in .zsh/ and all .zshrc does is load them.
+
+```
+pacman -S zsh zsh-completions
+```

@@ -1,6 +1,13 @@
 # Super Simple zsh config
 
-All bits go in .zsh/ and all .zshrc does is load them.
+Link dot\* to . in ~
+
+
+```
+ln -s zsh-config/dotzsh ~/.zsh
+ln -s zsh-config/dotzshrc ~/.zshrc
+
+```
 
 ```
 pacman -S zsh zsh-completions

@@ -1,5 +1,4 @@
-TERM="xterm-256color"
-
+#TERM="xterm-256color"
 
 zprompt_theme='powerlevel9k'
 for config (~/.zsh/*.zsh) source $config
@@ -34,7 +33,7 @@ fi
 DEFAULT_USER=$USER
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
 zplug load --verbose

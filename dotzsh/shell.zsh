@@ -1,4 +1,5 @@
 bindkey -v
+bindkey -v '^?' backward-delete-char
 
 export PATH=$PATH:$HOME/.local/bin/
 

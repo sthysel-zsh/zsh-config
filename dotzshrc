@@ -4,6 +4,7 @@ TERM="xterm-256color"
 zprompt_theme='powerlevel9k'
 for config (~/.zsh/*.zsh) source $config
 
+# Install zplug if its not
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
 then

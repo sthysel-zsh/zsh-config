@@ -1,4 +1,17 @@
-# Super Simple zsh config
+# zsh config
+
+![](./pics/cli.png)
+
+This config uses zplug and installs a number of plugins from
+omz, prezto and zuers.
+
+## Install 
+
+Get zsh
+
+```
+$sudo pacman -S zsh zsh-completions
+```
 
 Link dot\* to . in ~
 
@@ -6,16 +19,9 @@ Link dot\* to . in ~
 ```
 ln -s zsh-config/dotzsh ~/.zsh
 ln -s zsh-config/dotzshrc ~/.zshrc
-
 ```
 
-```
-pacman -S zsh zsh-completions
-```
-
-
-# going with zplug
-
-curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
+This config will test for the existence of zplug and install it if needs be.
+zplug will manage all plugins.
 
 

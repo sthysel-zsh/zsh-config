@@ -1,10 +1,5 @@
-TERM="xterm-256color"
-
-
-zprompt_theme='powerlevel9k'
-for config (~/.zsh/*.zsh) source $config
-
 # Install zplug if its not
+
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
 then
@@ -14,10 +9,16 @@ fi
 
 source ${ZPLUG_HOME}/init.zsh
 
-zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "sthysel/zsh-gayman"
+zplug "sthysel/zsh-pydev"
+zplug "sthysel/zsh-vim"
+zplug "supercrabtree/k"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose
@@ -32,12 +33,38 @@ then
     fi
 fi
 
+# zsh flags
+setopt APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
 
-# plugin config
+
+# config 
 DEFAULT_USER=$USER
-#POWERLEVEL9K_MODE='awesome-fontconfig'
+
+TERM="xterm-256color"
+HISTFILE=~/.zhistory
+HISTSIZE=1200
+SAVEHIST=1000
+
+zprompt_theme='powerlevel9k'
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
 zplug load
+
+# gitkraken is kraked
+alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
+
+alias ls="ls -hF --color=auto"
+alias ll="ls -lahF --color=auto"
+alias lsl="ls -lhF --color=auto"
+
+alias tree='tree -CAFa -I ".git" --dirsfirst'
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+setopt COMPLETE_ALIASES

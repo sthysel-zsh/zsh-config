@@ -1,4 +1,5 @@
 # Install zplug if its not
+
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
 then
@@ -49,13 +50,11 @@ SAVEHIST=1000
 
 zprompt_theme='powerlevel9k'
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
 zplug load --verbose
 
-# 
-alias vim="nvim"
 # gitkraken is kraked
 alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
 

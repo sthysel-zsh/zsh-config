@@ -1,5 +1,7 @@
 # zsh config
 
+![](./pics/cli.png)
+
 This config uses zplug and installs a number of plugins from
 omz, prezto and zuers.
 

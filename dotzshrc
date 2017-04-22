@@ -54,7 +54,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
-zplug load --verbose
+zplug load
 
 # gitkraken is kraked
 alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
@@ -69,4 +69,3 @@ compinit
 
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
-

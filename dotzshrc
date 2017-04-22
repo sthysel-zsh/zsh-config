@@ -71,3 +71,23 @@ alias README2RST='pandoc --from=markdown --to=rst --output=README.rst README.md'
 
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
+
+
+# pass project/repo e.g: wts/breadcrumb
+gitclonebhp () {
+    URL=https://${BHP_USER}@sdappsgit.ent.bhpbilliton.net/scm
+    git clone ${URL}/${1}
+}
+
+winmount() {
+    sudo mount -t vboxsf meinm9 ./windows/
+}
+
+
+case "${MACHINE_LOCATION}" in
+  BHP) proxy-on ;;
+  *) ;;
+esac
+
+
+

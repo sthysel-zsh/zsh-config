@@ -67,5 +67,7 @@ alias tree='tree -CAFa -I ".git" --dirsfirst'
 autoload -Uz compinit
 compinit
 
+alias README2RST='pandoc --from=markdown --to=rst --output=README.rst README.md'
+
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES

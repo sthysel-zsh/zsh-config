@@ -17,6 +17,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "sthysel/zsh-gayman"
 zplug "sthysel/zsh-pydev"
 zplug "sthysel/zsh-vim"
+zplug "sthysel/zsh-proxy"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 

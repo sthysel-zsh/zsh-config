@@ -14,10 +14,17 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+<<<<<<< HEAD
 zplug "sthysel/zsh-gayman"
 zplug "sthysel/zsh-pydev"
 zplug "sthysel/zsh-vim"
 zplug "sthysel/zsh-proxy"
+=======
+zplug "sthyselzsh/zsh-gayman"
+zplug "sthyselzsh/zsh-pydev"
+zplug "sthyselzsh/zsh-vim"
+zplug "sthyselzsh/zsh-proxy"
+>>>>>>> 6d0756487fd1c27600e5cc3aa57363a55fb22d79
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -67,5 +74,27 @@ alias tree='tree -CAFa -I ".git" --dirsfirst'
 autoload -Uz compinit
 compinit
 
+alias README2RST='pandoc --from=markdown --to=rst --output=README.rst README.md'
+
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
+
+
+# pass project/repo e.g: wts/breadcrumb
+gitclonebhp () {
+    URL=https://${BHP_USER}@sdappsgit.ent.bhpbilliton.net/scm
+    git clone ${URL}/${1}
+}
+
+winmount() {
+    sudo mount -t vboxsf meinm9 ./windows/
+}
+
+
+case "${MACHINE_LOCATION}" in
+  BHP) proxy-on ;;
+  *) ;;
+esac
+
+
+

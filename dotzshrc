@@ -14,17 +14,11 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-<<<<<<< HEAD
+# sthyselzsh
 zplug "sthysel/zsh-gayman"
 zplug "sthysel/zsh-pydev"
 zplug "sthysel/zsh-vim"
 zplug "sthysel/zsh-proxy"
-=======
-zplug "sthyselzsh/zsh-gayman"
-zplug "sthyselzsh/zsh-pydev"
-zplug "sthyselzsh/zsh-vim"
-zplug "sthyselzsh/zsh-proxy"
->>>>>>> 6d0756487fd1c27600e5cc3aa57363a55fb22d79
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 

@@ -20,6 +20,7 @@ zplug "sthysel/zsh-pydev"
 zplug "sthysel/zsh-vim"
 zplug "sthysel/zsh-proxy"
 zplug "supercrabtree/k"
+# needs to be last
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Install packages that have not been installed yet

@@ -36,6 +36,9 @@ then
     fi
 fi
 
+# plugin knobs tune
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
 # zsh flags
 setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST

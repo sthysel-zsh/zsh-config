@@ -17,7 +17,6 @@ Clone this repository and link the dots to ${HOME}
 
 
 ```
-ln -s zsh-config/dotzsh ~/.zsh
 ln -s zsh-config/dotzshrc ~/.zshrc
 ```
 

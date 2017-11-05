@@ -1,5 +1,4 @@
 # Install zplug if its not
-
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
 then
@@ -63,7 +62,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs vi
 zplug load
 
 # gitkraken is kraked
-alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
+# alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
 
 alias ls="ls -hF --color=auto"
 alias ll="ls -lahF --color=auto"
@@ -96,4 +95,13 @@ case "${MACHINE_LOCATION}" in
 esac
 
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# java
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
+
+# emacs
+alias ev="emacsclient -c"
 

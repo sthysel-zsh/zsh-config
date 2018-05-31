@@ -90,8 +90,8 @@ winmount() {
 
 
 case "${MACHINE_LOCATION}" in
-  BHP) proxy-on ;;
-  *) ;;
+  BHP) proxy-on ; echo "PROXY ON";;
+  *) echo "NO PROXY";;
 esac
 
 
@@ -104,4 +104,6 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
 
 # emacs
 alias ev="emacsclient -c"
+
+alias fuckit="google-chrome-stable --disable-web-security --user-data-dir"
 

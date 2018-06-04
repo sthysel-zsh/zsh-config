@@ -61,22 +61,32 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs vi
 
 zplug load
 
-# gitkraken is kraked
-# alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
-
-alias ls="ls -hF --color=auto"
-alias ll="ls -lahF --color=auto"
-alias lsl="ls -lhF --color=auto"
-
-alias tree='tree -CAFa -I ".git" --dirsfirst'
 autoload -Uz compinit
 compinit
-
-alias README2RST='pandoc --from=markdown --to=rst --output=README.rst README.md'
 
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 
+case "${MACHINE_LOCATION}" in
+  BHP) proxy-on ; echo "PROXY ON";;
+  *)
+esac
+
+# aliases
+# alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
+alias ls="ls -hF --color=auto"
+alias ll="ls -lahF --color=auto"
+alias lsl="ls -lhF --color=auto"
+alias tree='tree -CAFa -I ".git" --dirsfirst'
+
+# pandoc
+alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
+
+# functions
+# emacs
+ev() {
+    emacsclient -c $1 &
+}
 
 # pass project/repo e.g: wts/breadcrumb
 gitclonebhp () {
@@ -88,22 +98,4 @@ winmount() {
     sudo mount -t vboxsf meinm9 ./windows/
 }
 
-
-case "${MACHINE_LOCATION}" in
-  BHP) proxy-on ; echo "PROXY ON";;
-  *) echo "NO PROXY";;
-esac
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# java
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
-
-# emacs
-alias ev="emacsclient -c"
-
-alias fuckit="google-chrome-stable --disable-web-security --user-data-dir"
 

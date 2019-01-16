@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+
 # Install zplug if its not
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
@@ -64,6 +66,9 @@ zplug load
 autoload -Uz compinit
 compinit
 
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 
@@ -78,6 +83,7 @@ alias ls="ls -hF --color=auto"
 alias ll="ls -lahF --color=auto"
 alias lsl="ls -lhF --color=auto"
 alias tree='tree -CAFa -I ".git" --dirsfirst'
+alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 # pandoc
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
@@ -98,4 +104,4 @@ winmount() {
     sudo mount -t vboxsf meinm9 ./windows/
 }
 
-
+#zprof

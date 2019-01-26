@@ -6,3 +6,6 @@ export EDITOR=emacsclient
 
 # load the secrets
 source ~/.secrets
+
+typeset -U path
+path=(~/.local/bin $path[@])

@@ -72,36 +72,15 @@ kitty + complete setup zsh | source /dev/stdin
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 
-case "${MACHINE_LOCATION}" in
-  BHP) proxy-on ; echo "PROXY ON";;
-  *)
-esac
-
 # aliases
 # alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
 alias ls="ls -hF --color=auto"
 alias ll="ls -lahF --color=auto"
 alias lsl="ls -lhF --color=auto"
-alias tree='tree -CAFa -I ".git" --dirsfirst'
+alias tree='tree -CFa -I ".git" --dirsfirst'
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 # pandoc
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
-
-# functions
-# emacs
-ev() {
-    emacsclient -c $1 &
-}
-
-# pass project/repo e.g: wts/breadcrumb
-gitclonebhp () {
-    URL=https://${BHP_USER}@sdappsgit.ent.bhpbilliton.net/scm
-    git clone ${URL}/${1}
-}
-
-winmount() {
-    sudo mount -t vboxsf meinm9 ./windows/
-}
 
 #zprof

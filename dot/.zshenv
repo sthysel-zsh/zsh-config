@@ -16,3 +16,6 @@ export NUMBAPRO_NVVM=/opt/cuda/nvvm/lib64/libnvvm.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/targets/x86_64-linux/lib/:/lib/x86_64-linux-gnu 
 
 export PATH=$PATH:~/dotfiles/scripts/
+
+typeset -U path
+path=(~/.local/bin $path[@])

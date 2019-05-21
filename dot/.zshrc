@@ -74,9 +74,19 @@ setopt COMPLETE_ALIASES
 
 # aliases
 # alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
-alias ls="ls -hF --color=auto"
-alias ll="ls -lahF --color=auto"
-alias lsl="ls -lhF --color=auto"
+
+
+# alias ls="ls -hF --color=auto"
+# alias ll="ls -lahF --color=auto"
+# alias lsl="ls -lhF --color=auto"
+
+# lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 alias tree='tree -CFa -I ".git" --dirsfirst'
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 

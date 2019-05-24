@@ -83,6 +83,7 @@ setopt COMPLETE_ALIASES
 # lsd
 alias ls='lsd'
 alias l='ls -l'
+alias ll="ls -lahF"
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'

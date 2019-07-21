@@ -24,7 +24,8 @@ source /usr/bin/virtualenvwrapper.sh
 # some aliases
 alias ls='lsd'
 alias l='ls -l'
-alias ll="ls -lahF"alias la='ls -a'
+alias ll="ls -lahF"
+alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias tree='tree -CFa -I ".git" --dirsfirst'alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'

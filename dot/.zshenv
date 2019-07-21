@@ -28,7 +28,8 @@ alias ll="ls -lahF"
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias tree='tree -CFa -I ".git" --dirsfirst'alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
+alias tree='tree -CFa -I ".git" --dirsfirst'
+alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 # pandoc
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'

@@ -10,12 +10,12 @@ fi
 
 source ${ZPLUG_HOME}/init.zsh
 
+# load some nice zsh plugins
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-
 # sthyselzsh
 zplug "sthyselzsh/zsh-gayman"
 zplug "sthyselzsh/zsh-pydev"
@@ -47,7 +47,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
 
-
 # config 
 DEFAULT_USER=$USER
 
@@ -71,27 +70,5 @@ kitty + complete setup zsh | source /dev/stdin
 
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
-
-# aliases
-# alias gitkraken="LD_PRELOAD=/usr/lib/libcurl.so.3 gitkraken"
-
-
-# alias ls="ls -hF --color=auto"
-# alias ll="ls -lahF --color=auto"
-# alias lsl="ls -lhF --color=auto"
-
-# lsd
-alias ls='lsd'
-alias l='ls -l'
-alias ll="ls -lahF"
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-
-alias tree='tree -CFa -I ".git" --dirsfirst'
-alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
-
-# pandoc
-alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
 
 #zprof

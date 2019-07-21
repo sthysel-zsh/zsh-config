@@ -1,3 +1,2 @@
 install:
-	stow -t ${HOME} dot;\
-	zplug update
+	stow -t ${HOME} dot

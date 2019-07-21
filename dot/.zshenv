@@ -29,6 +29,8 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias tree='tree -CFa -I ".git" --dirsfirst'
+
+# force password prompt ssh, for when keys are broken or weird
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 # pandoc

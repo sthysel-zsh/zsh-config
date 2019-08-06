@@ -16,6 +16,7 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/z", from:oh-my-zsh
 # sthyselzsh
 zplug "sthyselzsh/zsh-gayman"
 zplug "sthyselzsh/zsh-pydev"
@@ -46,6 +47,7 @@ setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
+setopt auto_cd
 
 # config 
 DEFAULT_USER=$USER

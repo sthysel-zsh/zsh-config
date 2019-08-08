@@ -73,4 +73,5 @@ kitty + complete setup zsh | source /dev/stdin
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 
+
 #zprof

@@ -35,3 +35,6 @@ alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 # pandoc
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"

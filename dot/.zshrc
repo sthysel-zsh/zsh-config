@@ -65,10 +65,6 @@ HISTSIZE=1200
 SAVEHIST=1000
 
 ZSH_THEME='powerlevel10k/powerlevel10k'
-#zprompt_theme='powerlevel10k'
-#POWERLEVEL10K_MODE='nerdfont-complete'
-#POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
-#POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
 zplug load
 

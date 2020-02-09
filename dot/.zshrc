@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #zmodload zsh/zprof
 
 # Install zplug if its not
@@ -12,7 +19,7 @@ source ${ZPLUG_HOME}/init.zsh
 
 # load some nice zsh plugins
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -57,10 +64,11 @@ HISTFILE=~/.zhistory
 HISTSIZE=1200
 SAVEHIST=1000
 
-zprompt_theme='powerlevel9k'
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
+ZSH_THEME='powerlevel10k/powerlevel10k'
+#zprompt_theme='powerlevel10k'
+#POWERLEVEL10K_MODE='nerdfont-complete'
+#POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir)
+#POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs virtualenv)
 
 zplug load
 
@@ -75,3 +83,6 @@ setopt COMPLETE_ALIASES
 
 
 #zprof
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

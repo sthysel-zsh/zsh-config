@@ -4,7 +4,6 @@ source ~/.secrets
 export PATH=$PATH:~/.local/bin/
 export VISUAL=emacsclient
 export EDITOR=emacsclient
-export TERMINAL=kitty
 export BROWSER=google-chrome-stable
 
 # CUDA bullshit, fuck you nvidia

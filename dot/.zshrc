@@ -7,6 +7,9 @@ fi
 
 #zmodload zsh/zprof
 
+export TERMINAL=kitty
+export TERM=xterm-kitty
+
 # Install zplug if its not
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
@@ -59,7 +62,6 @@ setopt auto_cd
 # config 
 DEFAULT_USER=$USER
 
-TERM="xterm-256color"
 HISTFILE=~/.zhistory
 HISTSIZE=1200
 SAVEHIST=1000

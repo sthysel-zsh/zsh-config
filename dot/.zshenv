@@ -1,7 +1,7 @@
 # load the secrets
 source ~/.secrets
 
-export PATH=$PATH:~/.local/bin/:
+export PATH=$PATH:~/.local/bin/
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 export TERMINAL=kitty

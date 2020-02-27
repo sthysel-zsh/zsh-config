@@ -59,7 +59,6 @@ setopt auto_cd
 # config 
 DEFAULT_USER=$USER
 
-TERM="xterm-256color"
 HISTFILE=~/.zhistory
 HISTSIZE=1200
 SAVEHIST=1000

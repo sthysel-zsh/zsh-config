@@ -23,16 +23,15 @@ then
 fi
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
-# sthyselzsh
+zplug "supercrabtree/k"
 zplug "sthyselzsh/zsh-gayman"
 zplug "sthyselzsh/zsh-pydev"
 zplug "sthyselzsh/zsh-vim"
 zplug "sthyselzsh/zsh-proxy"
-zplug "supercrabtree/k"
+
 
 # ssh
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
@@ -62,7 +61,7 @@ setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
 setopt auto_cd
 
-# config 
+# config
 DEFAULT_USER=$USER
 
 HISTFILE=~/.zhistory
@@ -83,7 +82,15 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 
 
-#zprof
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1
+then
+  eval "$(pyenv init -)"
+fi
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

@@ -34,8 +34,8 @@ zplug "sthyselzsh/zsh-proxy"
 
 
 # ssh
-zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
-zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # needs to be last
 zplug "zsh-users/zsh-syntax-highlighting", defer:2

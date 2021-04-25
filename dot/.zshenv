@@ -5,7 +5,7 @@ export PATH=$PATH:~/.local/bin/
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 export TERM=xterm-kitty
-export BROWSER=google-chrome-stable
+#export BROWSER=google-chrome-stable
 
 # CUDA bullshit, fuck you nvidia
 export CUDA_HOME=/opt/cuda/
@@ -37,4 +37,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # python
 export WORKON_HOME=~/.virtualenvs
 # source ~/.local/bin/virtualenvwrapper.sh
-export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"

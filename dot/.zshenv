@@ -1,18 +1,17 @@
+# .zshenv is always sourced
+# it contains exported variables that should be available to other programs.
+# For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you
+# can set $ZDOTDIR in .zshenv to specify an alternative location for the rest
+# of your zsh configuration.
+
 # load the secrets
 source ~/.secrets
 
-export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/.local/bin/:~/go/bin:
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 export TERM=xterm-kitty
 #export BROWSER=google-chrome-stable
-
-# CUDA bullshit, fuck you nvidia
-export CUDA_HOME=/opt/cuda/
-export NUMBAPRO_CUDA_DRIVER=/usr/lib64/libcuda.so
-export NUMBAPRO_LIBDEVICE=/opt/cuda/nvvm/libdevice/
-export NUMBAPRO_NVVM=/opt/cuda/nvvm/lib64/libnvvm.so
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/targets/x86_64-linux/lib/:/lib/x86_64-linux-gnu
 
 # java
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
@@ -38,3 +37,15 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export WORKON_HOME=~/.virtualenvs
 # source ~/.local/bin/virtualenvwrapper.sh
 # export PATH="$HOME/.poetry/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+
+# CUDA bullshit, fuck you nvidia
+export CUDA_HOME=/opt/cuda/
+export NUMBAPRO_CUDA_DRIVER=/usr/lib64/libcuda.so
+export NUMBAPRO_LIBDEVICE=/opt/cuda/nvvm/libdevice/
+export NUMBAPRO_NVVM=/opt/cuda/nvvm/lib64/libnvvm.so
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/targets/x86_64-linux/lib/:/lib/x86_64-linux-gnu

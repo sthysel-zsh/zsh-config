@@ -38,3 +38,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export WORKON_HOME=~/.virtualenvs
 # source ~/.local/bin/virtualenvwrapper.sh
 export PATH="$HOME/.poetry/bin:$PATH"
+export LANG=en_AU.utf8

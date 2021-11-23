@@ -1,5 +1,8 @@
 #zmodload zsh/zprof
 
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+
 export TERMINAL=kitty
 export TERM=xterm-kitty
 

@@ -5,7 +5,7 @@
 # of your zsh configuration.
 
 # load the secrets
-source ~/.secrets
+source ~/.secrets.sh
 
 export PATH=$PATH:~/.local/bin/:~/go/bin:
 export VISUAL=emacsclient
@@ -23,7 +23,7 @@ alias ll="ls -lahF"
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias tree='tree -CFa -I ".git" --dirsfirst'
+alias tree='tree -CFa -I ".mypy_cache|.git|__pycache__" --dirsfirst'
 
 # force password prompt ssh, for when keys are broken or weird
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'

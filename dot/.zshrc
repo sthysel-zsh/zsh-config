@@ -1,5 +1,8 @@
 #zmodload zsh/zprof
 
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+
 export TERMINAL=kitty
 export TERM=xterm-kitty
 
@@ -14,14 +17,6 @@ fi
 source ${ZPLUG_HOME}/init.zsh
 
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
-then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -31,12 +26,6 @@ zplug "sthyselzsh/zsh-gayman"
 zplug "sthyselzsh/zsh-pydev"
 zplug "sthyselzsh/zsh-vim"
 zplug "sthyselzsh/zsh-proxy"
-
-
-# ssh
-# zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
-# zstyle :omz:plugins:ssh-agent agent-forwarding on
-
 # needs to be last
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -73,10 +62,9 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 zplug load
 
 fpath+=~/.zfunc
+# kitty auto complete
 autoload -Uz compinit
 compinit
-
-# Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
 zstyle ':completion:*' menu select
@@ -94,3 +82,5 @@ export PATH="$HOME/.poetry/bin:$PATH"
 eval $(thefuck --alias)
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
+# starship
+# eval "$(starship init zsh)"

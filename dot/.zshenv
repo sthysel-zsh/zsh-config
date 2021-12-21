@@ -1,3 +1,6 @@
+# ssh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # .zshenv is always sourced
 # it contains exported variables that should be available to other programs.
 # For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you

@@ -17,13 +17,15 @@ export TERM=xterm-kitty
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
 
 # some aliases
-alias ls='lsd'
-alias l='ls -l'
+alias ls="lsd"
+alias l="ls -l"
 alias ll="ls -lahF"
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
 alias tree='tree -CFa -I ".mypy_cache|.git|__pycache__" --dirsfirst'
+# emotive package management
+alias yeet="yay -Rcs"
 
 # force password prompt ssh, for when keys are broken or weird
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
@@ -31,15 +33,13 @@ alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 # pandoc
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # python
 export WORKON_HOME=~/.virtualenvs
-# source ~/.local/bin/virtualenvwrapper.sh
-# export PATH="$HOME/.poetry/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 

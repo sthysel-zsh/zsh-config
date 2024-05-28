@@ -10,6 +10,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # load the secrets
 source ~/.secrets.sh
 
+export LANG=en_AU.utf8
 export PATH=$PATH:~/.local/bin/:~/go/bin:~/.cargo/bin
 export TERMINAL=kitty
 export TERM=xterm-kitty
@@ -25,7 +26,6 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
 export WORKON_HOME=~/.virtualenvs
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # CUDA bullshit, fuck you nvidia

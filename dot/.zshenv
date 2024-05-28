@@ -25,6 +25,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
 export WORKON_HOME=~/.virtualenvs
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # CUDA bullshit, fuck you nvidia
@@ -46,3 +47,5 @@ alias tree='tree -CFa -I ".mypy_cache|.git|__pycache__" --dirsfirst'
 alias pssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 # pandoc markdown to rst
 alias md2rst='pandoc --from=markdown --to=rst --output=README.rst README.md'
+# emotive package management
+alias yeet="yay -Rcs"

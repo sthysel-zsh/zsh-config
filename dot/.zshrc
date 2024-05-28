@@ -1,11 +1,3 @@
-#zmodload zsh/zprof
-
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.5
-
-export TERMINAL=kitty
-export TERM=xterm-kitty
-
 # Install zplug if its not
 ZPLUG_HOME=~/.zplug
 if [[ ! -d ${ZPLUG_HOME} ]]
@@ -15,7 +7,6 @@ then
 fi
 
 source ${ZPLUG_HOME}/init.zsh
-
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "plugins/vi-mode", from:oh-my-zsh
@@ -42,7 +33,6 @@ then
     fi
 fi
 
-
 # zsh flags
 setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -62,6 +52,7 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 zplug load
 
 fpath+=~/.zfunc
+
 # kitty auto complete
 autoload -Uz compinit
 compinit
@@ -77,10 +68,3 @@ eval "$(pyenv init -)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
-eval $(thefuck --alias)
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.5
-# starship
-# eval "$(starship init zsh)"
